@@ -55,6 +55,7 @@
   .fact-tag{display:block;font-family:"Baloo 2",cursive;font-weight:700;color:var(--gold);
     text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;margin-bottom:8px;}
   .fact p{margin:0;color:var(--dim);font-size:1rem;line-height:1.75;}
+  .fact p + p{margin-top:.8em;}
 
   /* ---- question: the hook, most prominent, sharp corner = grows out of the line above ---- */
   .q{background:linear-gradient(135deg,rgba(207,232,138,.16),rgba(207,232,138,.05));
@@ -92,13 +93,6 @@
   .answers dt{font-family:"Baloo 2",cursive;color:var(--gold);float:left;margin-right:8px;}
   .answers dd{margin:0 0 .9em 0;overflow:hidden;}
 
-  /* ---- closing ---- */
-  .closing{text-align:center;font-size:1.12rem;line-height:1.8;
-    border-top:1px solid rgba(243,184,74,.25);border-bottom:1px solid rgba(243,184,74,.25);
-    padding:26px 10px;margin:40px 0;}
-  .closing .sign{display:block;font-family:"Baloo 2",cursive;color:var(--gold-soft);
-    font-size:1.4rem;margin-top:10px;}
-
   /* ---- references ---- */
   .refs{margin-top:54px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);
     font-size:.82rem;line-height:1.65;color:var(--dim);}
@@ -113,7 +107,7 @@
   @media print{
     @page{margin:1.4cm;}
     body{background:#0a1925;}
-    .q,.fact,.study,.answers,figure,.closing{break-inside:avoid;}
+    .q,.fact,.study,.answers,figure{break-inside:avoid;}
   }
 </style>
 </head>
@@ -127,14 +121,13 @@
     <hr class="rule">
   </header>
 
-  <p class="story lead">Last night I sat in a park I had never been to before. I lay back on the grass and looked up at the stars, and wished I could reach up and hold just one.</p>
+  <p class="story lead">Last night I sat in a park I had never been to before. I lay back on the grass and looked up at the stars, and wished I could reach up and hold one.</p>
   <p class="story">Then one star seemed to float down towards me. It landed, very gently, on my hand.</p>
-  <p class="story">It wasn't a star at all. It was a tiny firefly, glowing the soft golden colour of honey. So that's what I named her &mdash; Honey.</p>
-  <p class="story">Her little light began to shake. &ldquo;Please help me,&rdquo; she whispered. &ldquo;I'm lost.&rdquo;</p>
+  <p class="story">It wasn't a star at all. It was a tiny firefly, glowing the soft golden colour of honey. So that's what I named her &mdash; Miss Honey.</p>
 
   <div class="fact">
     <span class="fact-tag">Did you know?</span>
-    <p>Fireflies don't see colours the way we do. They can spot warm colours, like their own golden glow, really well, but they can hardly see blue or green at all.</p>
+    <p>Fireflies don't see colours the way we do. They can spot warm colours, like their own golden glow, but can hardly see blue or green at all.</p>
   </div>
 
   <figure>
@@ -142,63 +135,68 @@
     <figcaption>Left: what we see. Right: what a firefly sees.</figcaption>
   </figure>
 
-  <div class="q">
-    <span class="tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>Question 1</span>
-    <p>How many different lights can you spot around you right now? Streetlights, cars, signs, screens&hellip;?</p>
-  </div>
-
+  <p class="story">But soon, I realised this name meant more to her.</p>
+  <p class="story">&ldquo;Please help me,&rdquo; she whispered. &ldquo;I'm lost.&rdquo; Her little light began to shake.</p>
   <p class="story">&ldquo;Where are you trying to go?&rdquo; I asked.</p>
-  <p class="story">&ldquo;Home,&rdquo; said Honey. &ldquo;I have to find my honey &mdash; my mate. He's out there somewhere.&rdquo; She pointed with her tiny head. &ldquo;That way, I think.&rdquo;</p>
-  <p class="story">&ldquo;Shall I give you a lift in my car?&rdquo; I asked.</p>
-  <p class="story">&ldquo;Oh no!&rdquo; she cried. &ldquo;I can't go near cars and their bright headlights, or under the streetlights. Bright lights at night stop me finding my mate!&rdquo;</p>
+  <p class="story">&ldquo;Home,&rdquo; said Honey. &ldquo;I have to find my honey, my mate. He's out there somewhere.&rdquo; She pointed with her adorable head. &ldquo;That way, I think.&rdquo;</p>
+  <p class="story">&ldquo;Is it far? Shall I give you a lift in my car?&rdquo; I asked.</p>
+  <p class="story">&ldquo;Oh no!&rdquo; she shouted. &ldquo;I can't go near cars and their bright headlights. They stop me finding my mate!&rdquo;</p>
 
   <div class="fact">
     <span class="fact-tag">Did you know?</span>
-    <p>Honey is a kind of firefly called a common glow-worm. Only the males can fly. Females like Honey climb up a blade of grass and switch on a light in their tail instead, and the males fly past in the dark, spot the glow, and land beside them. Once she's found her mate, a female turns her light off.</p>
+    <p>There are more than 2,000 kinds of firefly in the world, and Honey's kind is called a common glow-worm. Common glow-worms live for only about two weeks. As adults they rarely eat, so they have very little energy to spare for glowing. Like a torch with weak batteries, glowing for too long makes their light fade.</p>
   </div>
+
+  <div class="q">
+    <span class="tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>Question 1</span>
+    <p>How many different lights can you think of? See what's glowing around you right now!</p>
+  </div>
+
+  <p class="story">Honey told me female glow-worms don't have wings and cannot fly, but can switch on a tiny light at the end of their bodies to attract nearby flying males. Once a female finds her mate, she turns her light off.</p>
 
   <figure>
     <img src="3.png" alt="A female glow-worm and a male glow-worm on a leaf.">
     <figcaption>Honey, a female common glow-worm (left), and a male (right).</figcaption>
   </figure>
 
-  <div class="q">
-    <span class="tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>Question 2</span>
-    <p>Which colours of light do you think are kinder to glow-worms &mdash; and which one is hardest for them? Have a guess before you read on!</p>
-  </div>
-
-  <p class="story">Honey looked up at the streetlights and sighed. &ldquo;There are so many of them now. They're so bright I can barely glow at all. The white ones are the worst.&rdquo;</p>
-  <p class="story">&ldquo;What kind of light would be better for you?&rdquo; I asked.</p>
-  <p class="story">She thought for a moment. &ldquo;I'm not really sure,&rdquo; she said.</p>
+  <p class="story">Honey looked up at the streetlights and sighed. &ldquo;There are too many streetlights now. They're so bright that I can barely glow at all. I cannot do anything about them, especially the white ones!&rdquo;</p>
+  <p class="story">&ldquo;So what kind of light might be better for you?&rdquo; I nodded and asked.</p>
+  <p class="story">She thought for a moment. &ldquo;I'm not really sure,&rdquo; she closed her eyes and answered.</p>
 
   <div class="fact">
     <span class="fact-tag">Did you know?</span>
-    <p>There are more than 2,000 kinds of firefly in the world. Common glow-worms like Honey live for only about two weeks, and use the dark to know when to glow &mdash; just like you sleep at night and wake in the morning. Bright artificial light tricks them into thinking morning has come, so they switch off too soon, and after years of more and more lights, our night skies have grown nearly 50% brighter.</p>
+    <p>The night is much brighter now: our skies have grown nearly 50% brighter in just twenty years.</p>
+    <p>Common glow-worms tell the time by how dark the night is, much like you go to bed when it's dark and wake up when it's light. So when our streetlights and headlights make the night as bright as day, glow-worms think morning has come and switch off too soon.</p>
   </div>
 
   <figure>
     <img src="7.png" alt="A street flooded with cold white streetlight, a few faint glow-worms in the grass.">
   </figure>
 
-  <p class="story">Honey couldn't tell me which light was worst &mdash; but scientists have been finding out.</p>
+  <p class="story">Honey couldn't tell me which light was worst, but scientists have been finding out.</p>
+
+  <div class="q">
+    <span class="tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>Question 2</span>
+    <p>Which colours of light do you think are kinder to glow-worms? Have a guess before you read on!</p>
+  </div>
 
   <div class="study">
     <span class="study-tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>What scientists found</span>
-    <p>They made pretend common glow-worms and lit them up in different colours, to see which ones the boys would still fly to. The boys came to the red and yellow lights &mdash; but hardly any came to the blue or white ones. The colour of a light really matters: warm reds and yellows are kinder to glow-worms, and the bright white light we use most is the hardest of all.</p>
+    <p>Scientists made model glow-worms and lit them up in different colours (white, yellow, red, and blue), to see which ones the males would fly to. Most male glow-worms came to the red and yellow lights, but seldom came to the blue or white ones. This shows that warm colours such as red and yellow are kinder to glow-worms.</p>
     <a class="study-ref" href="#refs">See references &darr;</a>
   </div>
+
+  <p class="story">Honey looked down at her own glow. &ldquo;Can you see? My light's getting dimmer,&rdquo; she said. &ldquo;The longer I have to shine under these lights, the harder it gets.&rdquo;</p>
+  <p class="story">She was right.</p>
 
   <div class="q">
     <span class="tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>Question 3</span>
     <p>What do you think happens to a common glow-worm that sits under a bright light for a long time?</p>
   </div>
 
-  <p class="story">Honey looked down at her own glow. &ldquo;Can you see? My light's getting dimmer,&rdquo; she said. &ldquo;The longer I sit under these lights, the harder it is to shine.&rdquo;</p>
-  <p class="story">She was right.</p>
-
   <div class="study">
     <span class="study-tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>What scientists found</span>
-    <p>Scientists watched how long glow-worms could keep glowing under bright light before giving up. The longer they stayed under the light, the more of them stopped glowing altogether &mdash; and after a long time, almost nine out of every ten had gone dark.</p>
+    <p>Scientists watched what happened when glow-worms sat under a bright light for different amounts of time. The longer the light shone on them, the more of them stopped glowing. After a long time, nine out of every ten had gone dark.</p>
     <a class="study-ref" href="#refs">See references &darr;</a>
   </div>
 
@@ -207,46 +205,45 @@
   </figure>
 
   <p class="story">I felt so sorry for Honey. &ldquo;Does the light bother the boys too?&rdquo; I asked.</p>
-  <p class="story">&ldquo;Yes!&rdquo; said Honey. &ldquo;I glow and glow, but they fly straight past me. I haven't done anything wrong!&rdquo; A tear rolled down her tiny face.</p>
+  <p class="story">&ldquo;I think so,&rdquo; said Honey. &ldquo;I glow so hard, but they just fly straight past me. Why is that? I haven't done anything wrong!&rdquo; A tear rolled down her tiny face. &ldquo;I'm sorry.&rdquo;</p>
 
   <div class="q">
     <span class="tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>Question 4</span>
-    <p>In the dark, a common glow-worm can switch her light off after just one night. Why might that be a good thing?</p>
+    <p>If a glow-worm has to glow for many nights instead of just one, do you think that's a good sign or a bad one? What might it mean?</p>
   </div>
-
-  <p class="story">I didn't know the answer either &mdash; but scientists had wondered the same thing.</p>
 
   <div class="study">
     <span class="study-tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>What scientists found</span>
-    <p>Scientists watched how many nights it took for each female to find a mate. In the dark, most were found on their very first night and could switch their light off. Under bright lights, they had to keep glowing for many more nights, waiting for a mate who simply couldn't see them.</p>
+    <p>Females stop glowing soon after they have mated. In the dark, most female glow-worms could find their mate on the first night and switch their light off. But under bright lights, they had to keep glowing for many more nights, waiting for a mate who simply couldn't see them. It means bright lights stop females from finding their mates.</p>
     <a class="study-ref" href="#refs">See references &darr;</a>
   </div>
 
-  <p class="story">&ldquo;Don't cry, Honey,&rdquo; I said. &ldquo;Your light is so lovely &mdash; I'm sure you'll find your mate.&rdquo;</p>
-  <p class="story">But she shook her head. &ldquo;You don't understand. Even when I hide far from the streetlights, I still can't get away from them. If only I had wings, I'd fly somewhere with no bright lights at all.&rdquo;</p>
-  <p class="story">And she was right about that, too.</p>
+  <p class="story">&ldquo;Don't cry, Honey,&rdquo; I said. &ldquo;Your light is so lovely, and I'm sure you'll find your mate.&rdquo;</p>
+  <p class="story">But she seemed even sadder. &ldquo;No, you don't understand. Even when I hide far from the streetlights, I can't get away from them. If only I had wings, I'd fly somewhere with no bright lights at all!&rdquo;</p>
 
   <div class="study">
     <span class="study-tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>What scientists found</span>
-    <p>Scientists tested whether moving further away from a light would help. It did &mdash; a little. But even far from the light, it was still much harder for the males to find the females. Distance alone couldn't undo the damage. Honey really couldn't escape it.</p>
+    <p>Scientists tested whether moving further away from a light would help. Even far from the light, most boys still flew past without spotting the girls. So Miss Honey really couldn't escape it.</p>
     <a class="study-ref" href="#refs">See references &darr;</a>
   </div>
 
-  <p class="story">Honey crawled onto my fingertip and looked right at me. &ldquo;Will you do something for me?&rdquo; she asked. &ldquo;Will you tell other children about us? People have started to help, but we need so many more to know.&rdquo;</p>
+  <p class="story">I was shocked and speechless.</p>
+  <p class="story">After a brief silence, she became serious and asked, &ldquo;May I ask you a favour?&rdquo;</p>
+  <p class="story">&ldquo;Me?&rdquo; I felt confused. &ldquo;What is it?&rdquo;</p>
+  <p class="story">Honey crawled onto my fingertip and looked right at me. &ldquo;Will you tell other children about us? We need more children to know.&rdquo;</p>
   <p class="story">&ldquo;I will,&rdquo; I promised.</p>
   <p class="story">Honey crawled up and kissed the tip of my finger. &ldquo;It's a deal!&rdquo;</p>
-
   <p class="story">Just then, all the lights in the park went out. Everything went quiet and dark.</p>
-  <p class="story">And Honey began to dance in my palm! &ldquo;Look!&rdquo; she cheered. &ldquo;Look at my light &mdash; it's getting brighter and brighter!&rdquo;</p>
+  <p class="story">Honey began to dance in my palm! &ldquo;Look!&rdquo; she cheered. &ldquo;Look at my light, it's getting brighter!&rdquo;</p>
   <p class="story">&ldquo;It's beautiful,&rdquo; I said. And it really was.</p>
 
   <figure>
     <img src="6.png" alt="In total darkness, Honey glows bright gold in an open palm.">
   </figure>
 
-  <p class="story">I looked up. From deep in the woods, hundreds of little lights came drifting towards us &mdash; green and gold, filling the dark like a sky full of low, close stars. They had all come for Honey.</p>
+  <p class="story">I looked up. From deep in the woods, hundreds of little lights came drifting towards us &mdash; green and gold, filling the dark like a sky full of close stars. They had all come for Miss Honey.</p>
   <p class="story">For a moment I couldn't tell which ones were fireflies and which were stars.</p>
-  <p class="story">Before I left, Honey asked me to come back on Sunday. Maybe by then she'll have found her honey. Do you want to come with me? You already know what she needs.</p>
+  <p class="story">Before I went home, Honey invited me to visit her this Sunday &mdash; I hope she'll have found her mate by then. Would you like to join me?</p>
 
   <figure class="portrait">
     <img src="5.png" alt="Cupped hands holding Honey, a whole woodland of glowing fireflies and stars behind.">
@@ -261,17 +258,12 @@
     <h2>Answers</h2>
     <dl>
       <dt>1.</dt><dd>Lights are everywhere &mdash; streetlights and car headlights, glowing signs and billboards, lights in greenhouses, even the lights on our own houses.</dd>
-      <dt>2.</dt><dd>Red and yellow light are kinder &mdash; the boys can still find the girls. Bright white and blue light are the hardest of all.</dd>
-      <dt>3.</dt><dd>The longer she stays under a bright light, the more likely her glow fades. After a long time, almost all common glow-worms stop glowing.</dd>
-      <dt>4.</dt><dd>In the dark, a boy finds her on the very first night, so she can switch her light off. Under bright lights nobody finds her, so she has to keep glowing night after night.</dd>
-      <dt>5.</dt><dd>Use warm red or yellow lights instead of white ones, keep lights on for less time, and best of all &mdash; switch off any light we don't need.</dd>
+      <dt>2.</dt><dd>Red and yellow light are kinder &mdash; males can still find the females. Bright white and blue light are the hardest of all.</dd>
+      <dt>3.</dt><dd>The longer she stays under a bright light, the more likely her glow fades.</dd>
+      <dt>4.</dt><dd>It's a bad sign. In the dark, a girl can be found by her mate on the very first night, so she switches her light off soon. But nobody can find her under bright lights, so she has to keep glowing night after night.</dd>
+      <dt>5.</dt><dd>Use warm red or yellow lights instead of white ones, keep lights on for less time, and switch off any light we don't need.</dd>
     </dl>
   </section>
-
-  <div class="closing">
-    Did you get them right? It doesn't matter if you can't remember every one. I just hope that next time you walk past a light nobody needs&hellip; you'll switch it off.
-    <span class="sign">For Honey.</span>
-  </div>
 
   <section class="refs" id="refs">
     <h2>References</h2>
