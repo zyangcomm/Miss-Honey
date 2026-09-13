@@ -49,11 +49,14 @@
 
   /* ---- shared icon ---- */
   .icon{width:18px;height:18px;flex:none;}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+    clip-path:inset(50%);white-space:nowrap;border:0;
+    text-transform:none;letter-spacing:normal;}
 
   /* ---- did you know: marginalia, lowest weight, attached to the flow ---- */
   .fact{margin:26px 0;padding-left:28px;border-left:2px solid rgba(243,184,74,.5);}
   .fact-tag{display:block;font-family:"Baloo 2",cursive;font-weight:700;color:var(--gold);
-    text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;margin-bottom:8px;}
+    text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;margin:0 0 8px;}
   .fact p{margin:0;color:var(--dim);font-size:1rem;line-height:1.75;}
   .fact p + p{margin-top:.8em;}
 
@@ -63,7 +66,7 @@
     border-radius:6px 26px 26px 26px;padding:22px 28px;margin:36px 0;
     box-shadow:0 0 30px rgba(207,232,138,.08);}
   .q .tag{display:flex;align-items:center;gap:8px;font-family:"Baloo 2",cursive;font-weight:700;color:var(--green);
-    text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;margin-bottom:8px;}
+    text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;margin:0 0 8px;}
   .q .icon{color:var(--green);}
   .q p{margin:0;font-size:1.08em;}
 
@@ -71,12 +74,16 @@
   .study{margin:32px 0;padding:20px 28px;background:rgba(143,208,224,.06);
     border-top:1px solid rgba(143,208,224,.4);border-bottom:1px solid rgba(143,208,224,.4);}
   .study-tag{display:flex;align-items:center;gap:7px;font-family:"IBM Plex Mono",monospace;font-weight:600;
-    color:var(--sky);text-transform:uppercase;letter-spacing:.12em;font-size:.7rem;margin-bottom:10px;}
+    color:var(--sky);text-transform:uppercase;letter-spacing:.12em;font-size:.7rem;margin:0 0 10px;}
   .study .icon{color:var(--sky);width:15px;height:15px;}
   .study p{margin:0 0 10px;font-size:.97rem;line-height:1.7;color:var(--cream);}
   .study-ref{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.03em;color:var(--sky);
-    text-decoration:none;opacity:.7;}
+    text-decoration:none;opacity:.7;display:inline-flex;align-items:center;min-height:32px;
+    padding:0 4px;margin-left:-4px;}
   .study-ref:hover{opacity:1;text-decoration:underline;}
+
+  a:focus-visible{outline:3px solid var(--gold-soft);outline-offset:4px;border-radius:3px;}
+  .study-ref:focus-visible{opacity:1;}
 
   /* ---- figures ---- */
   figure{margin:34px 0;}
@@ -125,13 +132,13 @@
   <p class="story">Then one star seemed to float down towards me. It landed, very gently, on my hand.</p>
   <p class="story">It wasn't a star at all. It was a tiny firefly, glowing the soft golden colour of honey. So that's what I named her &mdash; Miss Honey.</p>
 
-  <div class="fact">
-    <span class="fact-tag">Did you know?</span>
+  <section class="fact">
+    <h2 class="fact-tag">Did you know?<span class="sr-only"> How fireflies see colour</span></h2>
     <p>Fireflies don't see colours the way we do. They can spot warm colours, like their own golden glow, but can hardly see blue or green at all.</p>
-  </div>
+  </section>
 
   <figure>
-    <img src="2.png" alt="The same night garden, shown twice.">
+    <img src="2.png" alt="The same night garden in two views: ordinary night colours on the left and the warmer colours visible to a firefly on the right.">
     <figcaption>Left: what we see. Right: what a firefly sees.</figcaption>
   </figure>
 
@@ -142,15 +149,15 @@
   <p class="story">&ldquo;Is it far? Shall I give you a lift in my car?&rdquo; I asked.</p>
   <p class="story">&ldquo;Oh no!&rdquo; she shouted. &ldquo;I can't go near cars and their bright headlights. They stop me finding my mate!&rdquo;</p>
 
-  <div class="fact">
-    <span class="fact-tag">Did you know?</span>
+  <section class="fact">
+    <h2 class="fact-tag">Did you know?<span class="sr-only"> Common glow-worm lifespan and energy</span></h2>
     <p>There are more than 2,000 kinds of firefly in the world, and Honey's kind is called a common glow-worm. Common glow-worms live for only about two weeks. As adults they rarely eat, so they have very little energy to spare for glowing. Like a torch with weak batteries, glowing for too long makes their light fade.</p>
-  </div>
+  </section>
 
-  <div class="q">
-    <span class="tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>Question 1</span>
+  <section class="q">
+    <h2 class="tag"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>Question 1</h2>
     <p>How many different lights can you think of? See what's glowing around you right now!</p>
-  </div>
+  </section>
 
   <p class="story">Honey told me female glow-worms don't have wings and cannot fly, but can switch on a tiny light at the end of their bodies to attract nearby flying males. Once a female finds her mate, she turns her light off.</p>
 
@@ -163,11 +170,11 @@
   <p class="story">&ldquo;So what kind of light might be better for you?&rdquo; I nodded and asked.</p>
   <p class="story">She thought for a moment. &ldquo;I'm not really sure,&rdquo; she closed her eyes and answered.</p>
 
-  <div class="fact">
-    <span class="fact-tag">Did you know?</span>
+  <section class="fact">
+    <h2 class="fact-tag">Did you know?<span class="sr-only"> Artificial light and glow-worm body clocks</span></h2>
     <p>The night is much brighter now: our skies have grown nearly 50% brighter in just twenty years.</p>
     <p>Common glow-worms tell the time by how dark the night is, much like you go to bed when it's dark and wake up when it's light. So when our streetlights and headlights make the night as bright as day, glow-worms think morning has come and switch off too soon.</p>
-  </div>
+  </section>
 
   <figure>
     <img src="7.png" alt="A street flooded with cold white streetlight, a few faint glow-worms in the grass.">
@@ -175,30 +182,30 @@
 
   <p class="story">Honey couldn't tell me which light was worst, but scientists have been finding out.</p>
 
-  <div class="q">
-    <span class="tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>Question 2</span>
+  <section class="q">
+    <h2 class="tag"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>Question 2</h2>
     <p>Which colours of light do you think are kinder to glow-worms? Have a guess before you read on!</p>
-  </div>
+  </section>
 
-  <div class="study">
-    <span class="study-tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>What scientists found</span>
+  <section class="study">
+    <h2 class="study-tag"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>What scientists found<span class="sr-only"> &mdash; light colour and mate attraction</span></h2>
     <p>Scientists made model glow-worms and lit them up in different colours (white, yellow, red, and blue), to see which ones the males would fly to. Most male glow-worms came to the red and yellow lights, but seldom came to the blue or white ones. This shows that warm colours such as red and yellow are kinder to glow-worms.</p>
     <a class="study-ref" href="#refs">See references &darr;</a>
-  </div>
+  </section>
 
   <p class="story">Honey looked down at her own glow. &ldquo;Can you see? My light's getting dimmer,&rdquo; she said. &ldquo;The longer I have to shine under these lights, the harder it gets.&rdquo;</p>
   <p class="story">She was right.</p>
 
-  <div class="q">
-    <span class="tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>Question 3</span>
+  <section class="q">
+    <h2 class="tag"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>Question 3</h2>
     <p>What do you think happens to a common glow-worm that sits under a bright light for a long time?</p>
-  </div>
+  </section>
 
-  <div class="study">
-    <span class="study-tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>What scientists found</span>
+  <section class="study">
+    <h2 class="study-tag"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>What scientists found<span class="sr-only"> &mdash; bright-light exposure and fading glow</span></h2>
     <p>Scientists watched what happened when glow-worms sat under a bright light for different amounts of time. The longer the light shone on them, the more of them stopped glowing. After a long time, nine out of every ten had gone dark.</p>
     <a class="study-ref" href="#refs">See references &darr;</a>
-  </div>
+  </section>
 
   <figure>
     <img src="4.png" alt="Honey in an open palm, her glow faint under a cold streetlight.">
@@ -207,25 +214,25 @@
   <p class="story">I felt so sorry for Honey. &ldquo;Does the light bother the boys too?&rdquo; I asked.</p>
   <p class="story">&ldquo;I think so,&rdquo; said Honey. &ldquo;I glow so hard, but they just fly straight past me. Why is that? I haven't done anything wrong!&rdquo; A tear rolled down her tiny face. &ldquo;I'm sorry.&rdquo;</p>
 
-  <div class="q">
-    <span class="tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>Question 4</span>
+  <section class="q">
+    <h2 class="tag"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>Question 4</h2>
     <p>If a glow-worm has to glow for many nights instead of just one, do you think that's a good sign or a bad one? What might it mean?</p>
-  </div>
+  </section>
 
-  <div class="study">
-    <span class="study-tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>What scientists found</span>
+  <section class="study">
+    <h2 class="study-tag"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>What scientists found<span class="sr-only"> &mdash; artificial light and mating success</span></h2>
     <p>Females stop glowing soon after they have mated. In the dark, most female glow-worms could find their mate on the first night and switch their light off. But under bright lights, they had to keep glowing for many more nights, waiting for a mate who simply couldn't see them. It means bright lights stop females from finding their mates.</p>
     <a class="study-ref" href="#refs">See references &darr;</a>
-  </div>
+  </section>
 
   <p class="story">&ldquo;Don't cry, Honey,&rdquo; I said. &ldquo;Your light is so lovely, and I'm sure you'll find your mate.&rdquo;</p>
   <p class="story">But she seemed even sadder. &ldquo;No, you don't understand. Even when I hide far from the streetlights, I can't get away from them. If only I had wings, I'd fly somewhere with no bright lights at all!&rdquo;</p>
 
-  <div class="study">
-    <span class="study-tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>What scientists found</span>
+  <section class="study">
+    <h2 class="study-tag"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>What scientists found<span class="sr-only"> &mdash; distance from artificial light</span></h2>
     <p>Scientists tested whether moving further away from a light would help. Even far from the light, most boys still flew past without spotting the girls. So Miss Honey really couldn't escape it.</p>
     <a class="study-ref" href="#refs">See references &darr;</a>
-  </div>
+  </section>
 
   <p class="story">I was shocked and speechless.</p>
   <p class="story">After a brief silence, she became serious and asked, &ldquo;May I ask you a favour?&rdquo;</p>
@@ -249,10 +256,10 @@
     <img src="5.png" alt="Cupped hands holding Honey, a whole woodland of glowing fireflies and stars behind.">
   </figure>
 
-  <div class="q">
-    <span class="tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>Question 5</span>
+  <section class="q">
+    <h2 class="tag"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>Question 5</h2>
     <p>Can you remember the ways we could help Honey?</p>
-  </div>
+  </section>
 
   <section class="answers">
     <h2>Answers</h2>
