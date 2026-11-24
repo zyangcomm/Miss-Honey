@@ -25,8 +25,8 @@ Carried over from the three-tier layout of the print original, the page separate
 
 ## Technical Implementation
 
-- **Static HTML and CSS:** Single-page semantic HTML5 (`<main>`, `<header>`, `<section>`, `<figure>`, `<dl>`) paired with a dark night-sky stylesheet (`Baloo 2`, `Nunito`, and `IBM Plex Mono`) and print styles (`@media print`).
-- **Accessibility:** Includes `lang="en"`, screen-reader section labels (`.sr-only`), decorative SVG attributes (`aria-hidden="true"`), descriptive `alt` text on all seven illustrations, and `:focus-visible` outlines.
+- **Static HTML and CSS:** Single-page semantic HTML5 (`<main>`, `<header>`, `<section>`, `<figure>`, `<ol>`) paired with a dark night-sky stylesheet (`Baloo 2`, `Nunito`, and `IBM Plex Mono`) and print styles (`@media print`).
+- **Accessibility:** Includes `lang="en"`, screen-reader labels (`.sr-only`) for distinct reference link names, decorative SVG attributes (`aria-hidden="true"`), descriptive `alt` text on all seven illustrations, `44px` reference link targets, `:focus-visible` outlines (including `#refs` target focus), and `0` violations across 23 automated WCAG 2.2 AA checks (`axe-core`, `320px` reflow, `200%` zoom, text spacing, and focus indicators; standalone screen-reader testing not conducted).
 - **Hosting:** Deployed directly from the `main` branch via **GitHub Pages**.
 
 ## Repository Structure
