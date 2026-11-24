@@ -71,19 +71,20 @@
   .q p{margin:0;font-size:1.08em;}
 
   /* ---- what scientists found: flush-edged callout band, text insets like .q ---- */
-  .study{margin:32px 0;padding:20px 28px;background:rgba(143,208,224,.06);
+  .study{margin:32px 0;padding:20px 28px 14px;background:rgba(143,208,224,.06);
     border-top:1px solid rgba(143,208,224,.4);border-bottom:1px solid rgba(143,208,224,.4);}
   .study-tag{display:flex;align-items:center;gap:7px;font-family:"IBM Plex Mono",monospace;font-weight:600;
-    color:var(--sky);text-transform:uppercase;letter-spacing:.12em;font-size:.7rem;margin:0 0 10px;}
+    color:var(--sky);text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;margin:0 0 10px;}
   .study .icon{color:var(--sky);width:15px;height:15px;}
   .study p{margin:0 0 10px;font-size:.97rem;line-height:1.7;color:var(--cream);}
-  .study-ref{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.03em;color:var(--sky);
-    text-decoration:none;opacity:.7;display:inline-flex;align-items:center;min-height:32px;
+  .study-ref{font-family:"IBM Plex Mono",monospace;font-size:.85rem;letter-spacing:.03em;color:var(--sky);
+    text-decoration:underline;text-decoration-style:dotted;text-underline-offset:4px;
+    text-decoration-color:rgba(143,208,224,.7);display:inline-flex;align-items:center;min-height:44px;
     padding:0 4px;margin-left:-4px;}
-  .study-ref:hover{opacity:1;text-decoration:underline;}
+  .study-ref:hover{text-decoration-style:solid;text-decoration-color:currentColor;}
 
-  a:focus-visible{outline:3px solid var(--gold-soft);outline-offset:4px;border-radius:3px;}
-  .study-ref:focus-visible{opacity:1;}
+  a:focus-visible,.refs:focus-visible{outline:3px solid var(--gold-soft);outline-offset:4px;border-radius:3px;}
+  .refs:focus:not(:focus-visible){outline:none;}
 
   /* ---- figures ---- */
   figure{margin:34px 0;}
@@ -96,9 +97,10 @@
   .answers{background:var(--panel);border:1px solid rgba(255,255,255,.08);
     border-radius:16px;padding:8px 26px 22px;margin:36px 0;}
   .answers h2{font-family:"Baloo 2",cursive;color:var(--gold-soft);font-size:1.4rem;}
-  .answers dl{margin:0;}
-  .answers dt{font-family:"Baloo 2",cursive;color:var(--gold);float:left;margin-right:8px;}
-  .answers dd{margin:0 0 .9em 0;overflow:hidden;}
+  .answers ol{margin:0;padding-left:1.5em;}
+  .answers li{margin:0 0 .9em 0;padding-left:.35em;}
+  .answers li:last-child{margin-bottom:0;}
+  .answers li::marker{font-family:"Baloo 2",cursive;font-weight:700;color:var(--gold);}
 
   /* ---- references ---- */
   .refs{margin-top:54px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);
@@ -190,7 +192,7 @@
   <section class="study">
     <h2 class="study-tag"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>What scientists found<span class="sr-only">: light colour and mate attraction</span></h2>
     <p>Researchers tested model glow-worms under white, yellow, red, blue, or no artificial light and caught over 600 males in total. Most males flew towards red, yellow, or unlit models, but far fewer approached under blue or white glare. When outdoor lighting cannot be avoided, warm red or yellow light leaves glow-worms a much better chance than white or blue.</p>
-    <a class="study-ref" href="#refs">See references &darr;</a>
+    <a class="study-ref" href="#refs">See references<span class="sr-only"> for light colour and mate attraction</span> &darr;</a>
   </section>
 
   <p class="story">Honey glanced down at her body. &ldquo;My glow is getting dimmer, can you see?&rdquo; she said. &ldquo;The longer we stay under bright lights, the harder it gets to keep shining.&rdquo;</p>
@@ -203,7 +205,7 @@
   <section class="study">
     <h2 class="study-tag"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>What scientists found<span class="sr-only">: bright-light exposure and fading glow</span></h2>
     <p>Scientists divided 88 glowing females into three groups at streetlight brightness: no exposure, short exposure, and long exposure. Three days later, the proportion that stopped glowing climbed from 3% with no exposure to 15% after short exposure, and a shocking 90% after long exposure.</p>
-    <a class="study-ref" href="#refs">See references &darr;</a>
+    <a class="study-ref" href="#refs">See references<span class="sr-only"> for bright-light exposure and fading glow</span> &darr;</a>
   </section>
 
   <figure>
@@ -221,7 +223,7 @@
   <section class="study">
     <h2 class="study-tag"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>What scientists found<span class="sr-only">: artificial light and mating success</span></h2>
     <p>Females stop glowing soon after mating, so extra nights spent lit mean extra nights alone. Across 51 females tracked in dark and lit sites, all 24 in the dark stopped glowing after just 1 night, including 8 moved out of bright areas. Females left under lights kept glowing for a median of 6 nights, and up to 15 nights, waiting for mates who could no longer spot them.</p>
-    <a class="study-ref" href="#refs">See references &darr;</a>
+    <a class="study-ref" href="#refs">See references<span class="sr-only"> for artificial light and mating success</span> &darr;</a>
   </section>
 
   <p class="story">&ldquo;Don't cry, Miss Honey,&rdquo; I said, trying to comfort her. &ldquo;Your light is lovely. You will find your mate.&rdquo;</p>
@@ -230,7 +232,7 @@
   <section class="study">
     <h2 class="study-tag"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>What scientists found<span class="sr-only">: distance from artificial light</span></h2>
     <p>Scientists placed a bright LED in the middle of a field, shielded one side, and set model glow-worms in both directions. At 10 metres on the lit side, traps drew only 5% as many males as in the dark: 1 male for every 20 in dark traps. Even 55 metres away, dark traps still drew roughly twice as many males. Moving down the road is not enough to escape the glare.</p>
-    <a class="study-ref" href="#refs">See references &darr;</a>
+    <a class="study-ref" href="#refs">See references<span class="sr-only"> for distance from artificial light</span> &darr;</a>
   </section>
 
   <p class="story">I was shocked and speechless.</p>
@@ -262,18 +264,18 @@
 
   <section class="answers">
     <h2>Answers</h2>
-    <dl>
-      <dt>1.</dt><dd>Artificial lights appear in many places: streetlights and car headlights, shop signs and billboards, grow lights in greenhouses, and security or decorative lights on our own houses.</dd>
-      <dt>2.</dt><dd>Red and yellow lights trouble glow-worms less, because males can still spot the females. Bright white and blue lights cause the worst disruption.</dd>
-      <dt>3.</dt><dd>The longer she stays under a bright light, the higher the chance her glow fades out.</dd>
-      <dt>4.</dt><dd>Bad news. In the dark, females usually find a mate on the first night and switch off. Under bright lights, nobody sees them, forcing them to glow night after night until their energy runs out.</dd>
-      <dt>5.</dt><dd>Choose warm red or yellow light over bright white, shorten lighting hours, and switch off lights you don't need.</dd>
-    </dl>
+    <ol>
+      <li>Artificial lights appear in many places: streetlights and car headlights, shop signs and billboards, grow lights in greenhouses, and security or decorative lights on our own houses.</li>
+      <li>Red and yellow lights trouble glow-worms less, because males can still spot the females. Bright white and blue lights cause the worst disruption.</li>
+      <li>The longer she stays under a bright light, the higher the chance her glow fades out.</li>
+      <li>Bad news. In the dark, females usually find a mate on the first night and switch off. Under bright lights, nobody sees them, forcing them to glow night after night until their energy runs out.</li>
+      <li>Choose warm red or yellow light over bright white, shorten lighting hours, and switch off lights you don't need.</li>
+    </ol>
   </section>
 
   <p class="story">Did your answers match? Don't worry if you can't remember every detail. All that matters is remembering to switch off a light you don't need when you pass by.</p>
 
-  <section class="refs" id="refs">
+  <section class="refs" id="refs" tabindex="-1">
     <h2>References</h2>
     <ul>
       <li>Elgert, C. et al. (2021) &lsquo;The duration of artificial light defines sexual signalling in the common glow-worm&rsquo;, <i>Behavioral Ecology and Sociobiology</i>, 75(11). <a href="https://link.springer.com/article/10.1007/s00265-021-03093-2">doi: 10.1007/s00265-021-03093-2</a>.</li>
